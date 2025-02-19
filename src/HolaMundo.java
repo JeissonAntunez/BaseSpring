@@ -1,10 +1,25 @@
+import javax.swing.*;
 import java.lang.reflect.Field;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class HolaMundo {
 
     // Método main debe ser estático
     public static void main(String[] args) {
-        int numeroDecimal = 7;
+
+        Scanner scanner = new Scanner(System.in);
+        imprimir("Ingrese un número entero: ");
+        //String numeroStr = scanner.nextLine();
+        int numeroDecimal = 0;
+        try {
+            numeroDecimal = scanner.nextInt();
+        } catch (InputMismatchException e){
+            //Va cambiando
+            imprimir("Error debe ingresar un número entero");
+            main(args);
+            System.exit(0);
+        }
 
         imprimir("numeroDecimal = " + numeroDecimal);
         imprimir("numero binario de " + numeroDecimal + " = " + Integer.toBinaryString(numeroDecimal));
