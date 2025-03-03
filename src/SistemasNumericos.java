@@ -17,6 +17,7 @@ public class SistemasNumericos {
         imprimir("NumeroDecimal = " + numeroDecimal);
 
         imprimir("Hola Jeisson");
+        imprimir("Hola Jeisson222");
     }
 
     // Realizo un metodo o funcion para imprimir cualquier tipo de dato
